@@ -1,6 +1,6 @@
 
 
-export const Home = () => { 
+export const Home = (req: Request, res: Response, next:any) => { 
     return (
         <>
         user authenticated, <br></br>

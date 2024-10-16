@@ -20,7 +20,7 @@ export const Signup = () => {
                 const response = await axios.post(`${BACKEND_URL}/api/user/signup`,postInputs)
                 const jwt = response.data;
                 localStorage.setItem("token", jwt);
-                axios.get('http://localhost:3000/protected', {
+                axios.get('http://localhost:3000/home', {
                     headers: {
                       Authorization: `Bearer ${jwt}`, // Send the token in Authorization header
                     }
@@ -39,7 +39,7 @@ export const Signup = () => {
                         <div className="text-3xl">Create an Account</div>
                         <div className="flex text-xs text-gray-500">
                         <div className="pr-3">Already have an account?</div>
-                        <Link className="underline" to="/signin">Signin</Link>
+                        <Link className="underline" to="/signin">Sign in</Link>
                         </div>
                         <div className="text-sm font-bold pl-1 pt-12 pb-1">Name</div>
                         <Input type="text" placeholder="Enter your name" className="bg-gray-100 w-80" onChange={(e) => {
@@ -49,7 +49,7 @@ export const Signup = () => {
                             })
                         }}/>
                         <div className="text-sm font-bold pl-1 pt-3 pb-1">Email</div>
-                        <Input type="email" placeholder="eg ayush23100@akgec.ac.in" className="bg-gray-100 w-80" onChange={(e) => {
+                        <Input type="email" placeholder="eg; ayush23100@akgec.ac.in" className="bg-gray-100 w-80" onChange={(e) => {
                             setPostInputs({
                                 ...postInputs,
                                 email: e.target.value,
