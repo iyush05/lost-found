@@ -48,7 +48,7 @@ DATABASE_URL=<your_database_url>
 JWT_SECRET=<your_jwt_secret>
 ```
 
-## Frontend Setup
+## 3. Frontend Setup
 
 Go to the /frontend folder.
 
