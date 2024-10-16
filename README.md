@@ -60,9 +60,9 @@ export const BACKEND_URL = '<your_cloudflare_workers_url>';
 
 ## Technologies Used 
 
-- ** Vite.js for frontend.
-- ** Hono for backend.
-- ** Prisma for database ORM.
-- ** PostgreSQL as the database.
-- ** Ollama LLM to power item-description matching.
-- ** Cloudflare Workers for serverless deployment.
+- Vite.js for frontend.
+- Hono for backend.
+- Prisma for database ORM.
+- PostgreSQL as the database.
+- Ollama LLM to power item-description matching.
+- Cloudflare Workers for serverless deployment.
