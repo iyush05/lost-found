@@ -29,6 +29,7 @@ Follow these steps to set up and run the project:
 ```bash
 git clone <repository-url>
 cd <repository-name>
+npm install
 ```
 
 ## 2. Backend Setup
@@ -56,6 +57,11 @@ In config.ts, set up the BACKEND_URL to point to your Cloudflare Workers:
 
 ```ts
 export const BACKEND_URL = '<your_cloudflare_workers_url>';
+```
+
+## Start the development server
+```bash
+npm run dev
 ```
 
 ## Technologies Used 
