@@ -3,7 +3,8 @@
 export const Home = () => { 
     return (
         <>
-        hey
+        user authenticated, <br></br>
+        this is the landing page, will be developed soon.
         </>
     )
 }
