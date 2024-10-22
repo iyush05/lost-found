@@ -34,9 +34,16 @@ npm install
 
 ## 2. Backend Setup
 
-Got to the /backend folder.
+Got to the /backend folder and run
 
-Create a .env file and add the following environment variables:
+```bash 
+wrangler login
+npm run deploy
+```
+
+copy the backend url and paste it in the /frontend/config.ts
+
+Create a .env file and add the following environment variables (use prisma accelerate) :
 
 ```bash
 DATABASE_URL=<your_database_url>
