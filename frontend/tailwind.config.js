@@ -8,7 +8,11 @@ export default {
     "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
   ],
   theme: {
-  	extend: {},
+  	extend: {
+      backgroundImage: {
+        'loginPage': "url('/hero.jpg')",
+      }
+    },
   },
   plugins: [],
 }

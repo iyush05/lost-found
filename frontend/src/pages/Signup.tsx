@@ -33,39 +33,39 @@ export const Signup = () => {
     
     return (
         <>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-2 h-screen">
                 <div className="">
                     <div className="mt-28 ml-24 mr-12 ">
                         <div className="text-3xl">Create an Account</div>
                         <div className="flex text-xs text-gray-500">
-                        <div className="pr-3">Already have an account?</div>
-                        <Link className="underline" to="/signin">Sign in</Link>
+                        <div className="pr-3 text-orange-400">Already have an account?</div>
+                        <Link className="underline text-blue-950" to="/signin">Sign in</Link>
                         </div>
                         <div className="text-sm font-bold pl-1 pt-12 pb-1">Name</div>
-                        <Input type="text" placeholder="Enter your name" className="bg-gray-100 w-80" onChange={(e) => {
+                        <Input type="text" placeholder="Enter your name" className="bg-gray-100 w-80 text-orange-500" onChange={(e) => {
                             setPostInputs({
                                 ...postInputs,
                                 name: e.target.value
                             })
                         }}/>
                         <div className="text-sm font-bold pl-1 pt-3 pb-1">Email</div>
-                        <Input type="email" placeholder="eg; ayush23100@akgec.ac.in" className="bg-gray-100 w-80" onChange={(e) => {
+                        <Input type="email" placeholder="eg; ayush23100@akgec.ac.in" className="bg-gray-100 w-80 text-orange-500" onChange={(e) => {
                             setPostInputs({
                                 ...postInputs,
                                 email: e.target.value,
                             })
                         }}/>
                         <div className="text-sm font-bold pl-1 pt-3 pb-1">Password</div>
-                        <Input type="password" placeholder="Password" className="bg-gray-100 w-80" onChange={(e) => {
+                        <Input type="password" placeholder="Password" className="bg-gray-100 w-80 text-orange-500" onChange={(e) => {
                             setPostInputs({
                                 ...postInputs,
                                 password: e.target.value,
                             })
                         }}/>
-                        <Button className="bg-black text-white hover:bg-gray-600 mt-6 w-80 h-8" onClick={handleButtonClick}>Signup</Button>
+                        <Button className="bg-orange-500 text-white hover:bg-orange-700 mt-6 w-80 h-8" onClick={handleButtonClick}>Signup</Button>
                     </div>
                 </div>
-                <div className="hidden md:block">
+                <div className="hidden md:block ">
                     <Quote/>
                 </div>
             </div>
