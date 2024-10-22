@@ -34,8 +34,8 @@ export const Signup = () => {
     return (
         <>
             <div className="grid grid-cols-2 h-screen">
-                <div className="">
-                    <div className="mt-28 ml-24 mr-12 ">
+                <div className="flex items-center justify-center">
+                    <div className="">
                         <div className="text-3xl">Create an Account</div>
                         <div className="flex text-xs text-gray-500">
                         <div className="pr-3 text-orange-400">Already have an account?</div>
