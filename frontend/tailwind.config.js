@@ -10,8 +10,15 @@ export default {
   theme: {
   	extend: {
       backgroundImage: {
-        'loginPage': "url('/hero.jpg')",
-      }
+        'loginPage': "url('/hero.jpeg')",
+        'foundPage': "url('/found-bg.jpg')",
+        'lostPage': "url('/lost-bg.jpg')",
+        'howitworks': "url('/howitworks.jpg')",
+      },
+      fontFamily: {
+        shadows: ['"Shadows Into Light"', 'cursive'], // Custom font
+        cedarville: ['"Cedarville Cursive"', 'cursive'],
+      },
     },
   },
   plugins: [],

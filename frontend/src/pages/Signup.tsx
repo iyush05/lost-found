@@ -17,19 +17,18 @@ export const Signup = () => {
 
         const handleButtonClick = async () => {
             try{
+                if (!postInputs.name || !postInputs.email || !postInputs.password) {
+                    alert("All fields are required!");
+                    return;
+                }
                 if(!(postInputs.email).endsWith('@akgec.ac.in')) {
-                    return (
-                        alert("Email must be of AKGEC domain.")
-                    )
+                    alert("Email must be of AKGEC domain.")
+                    return;
                 }
                 const response = await axios.post(`${BACKEND_URL}/api/user/signup`,postInputs)
                 const jwt = response.data;
                 localStorage.setItem("token", jwt);
-                axios.get('http://localhost:3000/home', {
-                    headers: {
-                      Authorization: `Bearer ${jwt}`, // Send the token in Authorization header
-                    }
-                  })
+                
                 navigate("/home");
             } catch(e) {
                 alert("Error while signing up");

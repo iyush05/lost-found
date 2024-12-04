@@ -4,7 +4,7 @@ export const Quote = () => {
         <div className="flex justify-center items-center absolute inset-0 bg-orange-500 bg-opacity-80">
         <div className="max-w-lg">   
             <div className="text-4xl font-bold text-white">
-            LOST or FOUND something, you have come to the right place.
+            LOST or FOUND something? you have come to the right place.
             </div>
             <div className="max-w-md text-xl font-semibold text-left mt-4 flex">
                     <img src="/logo.png" alt="logo" className="rounded-full mr-1" height={10} width={25}/>
