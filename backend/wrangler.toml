@@ -6,6 +6,7 @@ compatibility_flags = [ "nodejs_compat" ]
 [vars]
 DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZmI5MjZjYWYtZTliMC00ODBhLTg0MmUtNzFjMGViYzAxNTlmIiwidGVuYW50X2lkIjoiNWYzNmM1M2ZhNjc0N2Y5ZTVkZGYxODk4N2Y4NjNlNDIxNmJlMTg1YWE0MDZhYmZkNmEyMmQyNDE4M2EwMjRmMCIsImludGVybmFsX3NlY3JldCI6Ijg3MjQxNGFmLWIyN2EtNGU3YS05ZDgyLTI0OWNjNTE5MjNmMiJ9._J7je4osuZo_EyLXVlAOlATvLvwh92sJ_r6vNoKwknk"
 JWT_SECRET="ayushsecret"
+GOOGLE_API_KEY="AIzaSyC75D6gFNA1uU6G2-M8PZh4HL2yn4136oY"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"

@@ -2,13 +2,15 @@ import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { Hono } from "hono";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import axios from "axios";
 import 'dotenv/config'
+
+
 
 export const queryRouter = new Hono<{
     Bindings: {
         DATABASE_URL: string;
         JWT_SECRET: string;
+        GOOGLE_API_KEY: string;
     }
 }>();
 
@@ -19,7 +21,7 @@ queryRouter.post('/query', async(c) => {
     }).$extends(withAccelerate());
     console.log(prompt);
 
-    const genAI = new GoogleGenerativeAI("AIzaSyC75D6gFNA1uU6G2-M8PZh4HL2yn4136oY");
+    const genAI = new GoogleGenerativeAI(c.env.GOOGLE_API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 
@@ -40,4 +42,3 @@ queryRouter.post('/query', async(c) => {
     return c.text(response); 
 });
 
-//api AIzaSyC75D6gFNA1uU6G2-M8PZh4HL2yn4136oY
