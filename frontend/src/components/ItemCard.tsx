@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "./ui/button";
 
 
@@ -13,6 +14,8 @@ export const ItemCard = ({
     description
 }: ItemCardProps) => {
 
+    const [collect, setCollect] = useState(false);
+
     return( 
         <div className="bg-transparent border-2 border-black w-auto h-auto m-4 mt-6 rounded-lg flex align items-center ">
             <div className='grid grid-cols-8 m-4'>
@@ -24,9 +27,7 @@ export const ItemCard = ({
                 <div className="mt-1"><u className="font-bold">Description</u> : {description}</div>
             </div>
             </div>
-            
-            <Button className="bg-yellow-400 hover:bg-yellow-600 mr-2 border-yellow-500 border-2">Schedule a meet</Button>
-
+            {(collect) ? "Item request received you can collect the item from CSIT block CL-3" : <Button className="bg-yellow-400 hover:bg-yellow-600 mr-2 border-yellow-500 border-2 hidden:" onClick={() => setCollect(true)}>Schedule a meet</Button>}
         </div>
     )
 }
