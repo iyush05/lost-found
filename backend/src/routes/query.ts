@@ -28,6 +28,7 @@ queryRouter.post('/query', async(c) => {
 
     let lostItems = await prisma.lostItems.findMany();
     const lsItem = JSON.stringify(lostItems);
+    console.log(lsItem);
     const finalQuery = "I am going to provide the data and i will provide a vague description of an item that may or may not be present in the data if you find a slightly similar item in tha data then return the id of the item . If you do not find the item the return = hesoyam ONLY RETURN THE ID OF THE ITEM. Description : " + prompt.query + lsItem;
     // let finalQuery = {
     //     task : "I am going to provide the data and i will provide the description of an item that may or may not be present in the data if you find the item in tha data then return the id of the item.",

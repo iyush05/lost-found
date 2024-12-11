@@ -8,27 +8,42 @@ import { ItemCard } from "@/components/ItemCard";
 
 
 export const Lost = () => {
-    const [postDescription, setPostDescription] = useState({
-        description: "",
+    const [prompt, setPrompt] = useState({
+        query: "",
     });
     const [result, setResult] = useState<{id: string; name: string; description: string} | null>(null);
 
     const handleButtonClick = async () => {
-        const response = await axios.post(`${BACKEND_URL}/api/llama/query`, postDescription, {
-            headers: {
-                'Content-Type': 'application/json'
+        try {
+            console.log("Sending POST request with body:", prompt);
+    
+            const response = await axios.post(
+                `${BACKEND_URL}/api/llama/query`, 
+                prompt, 
+                { headers: { 'Content-Type': 'application/json' } }
+            );
+    
+            console.log("POST Response:", response.data);
+    
+            const itemId = response.data.id || response.data; // Adjust based on response structure
+            if (!itemId) {
+                console.error("Invalid ID received from POST response:", response.data);
+                return;
             }
-        });
-        console.log(response);
-        const res = await axios.get(`${BACKEND_URL}/api/user/items/${response.data}`, {
-            headers: {
-                'Content-Type': 'application/json',
-        }});
-
-        setResult(res.data);
-        
-    console.log(res);
-    }
+    
+            const res = await axios.get(
+                `${BACKEND_URL}/api/user/items/${itemId}`, 
+                { headers: { 'Content-Type': 'application/json' } }
+            );
+    
+            console.log("GET Response:", res.data);
+    
+            setResult(res.data);
+        } catch (error) {
+            console.error("Error occurred:", error);
+        }
+    };
+    
 
     
 
@@ -43,9 +58,9 @@ export const Lost = () => {
                     </div>
                     <Textarea className="mt-24 border-black border-2 placeholder:text-gray-500 w-96 h-24 ml-24" placeholder="Describe the item you lost"
                      onChange={(e) => {
-                            setPostDescription({
-                                ...postDescription,
-                                description: e.target.value
+                            setPrompt({
+                                ...prompt,
+                                query: e.target.value
                             })
                      }}/>
                     <Button className="bg-gray-600 text-white ml-64 mt-6 hover:bg-gray-800 w-24" onClick={handleButtonClick}> Search </Button>
