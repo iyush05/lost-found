@@ -19,6 +19,15 @@ export default {
         shadows: ['"Shadows Into Light"', 'cursive'], // Custom font
         cedarville: ['"Cedarville Cursive"', 'cursive'],
       },
+      keyframes: {
+        slideUp: {
+          '0%': { backgroundPositionY: '100%' },
+          '100%': { backgroundPositionY: '0%' },
+        },
+      },
+      animation: {
+        slideUp: 'slideUp 1s ease-out',
+      },
     },
   },
   plugins: [],

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import axios from "axios";
 import { BACKEND_URL } from "../../config";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ItemCard } from "@/components/ItemCard";
 
 
@@ -19,7 +19,7 @@ export const Lost = () => {
                 'Content-Type': 'application/json'
             }
         });
-        console.log(response.data);
+        console.log(response);
         const res = await axios.get(`${BACKEND_URL}/api/user/items/${response.data}`, {
             headers: {
                 'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const Lost = () => {
 
         setResult(res.data);
         
-    console.log(result);
+    console.log(res);
     }
 
     

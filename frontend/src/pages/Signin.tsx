@@ -56,7 +56,7 @@ export const Signin = () => {
                                 password: e.target.value
                             })
                         }}/>
-                        <Button className={`bg-orange-500 text-white hover:bg-orange-700 mt-6 w-96 h-10 ${loading ? 'bg-orange-700' : 'bg-orange-500'}`} onClick={handleButtonClick}> {loading && <Loader/>} {!loading && "Signup"}</Button>
+                        <Button className={`bg-orange-500 text-white hover:bg-orange-700 mt-6 w-96 h-10 ${loading ? 'bg-orange-700' : 'bg-orange-500'}`} onClick={handleButtonClick}> {loading && <Loader/>} {!loading && "Signin"}</Button>
                     </div>
                 </div>
                 <div className="hidden md:block ">

@@ -12,7 +12,7 @@ export const Home = () => {
                 Found
             </div>
         </div>
-        <div className="bg-howitworks bg-cover bg-fized bg-center h-screen w-screen">
+        <div className="bg-howitworks bg-cover bg-fized bg-no-repeat animate-slideUp bg-center h-screen w-screen">
             <div className="font-cedarville justify text-center pt-6 text-8xl">How it works</div>
             <div className="grid grid-cols-2">
                 <div>

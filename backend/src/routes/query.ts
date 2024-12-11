@@ -36,7 +36,8 @@ queryRouter.post('/query', async(c) => {
     // }
 
     // finalQuery = JSON.stringify(finalQuery);
-    // console.log(finalQuery);
+    console.log(prompt.query);
+    console.log(finalQuery);
     const result = await model.generateContent(finalQuery);
     const response = result.response.text();
     return c.text(response); 
