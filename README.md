@@ -8,7 +8,7 @@ Welcome to the College Lost and Found website! This platform allows students to 
 - **Secure Access**: Only students with a valid college email address can sign up and log in.
 - **AI-Powered Matching**: Our system uses a RAG model with Ollama LLM to enhance matching accuracy between lost and found item descriptions.
 
-## Live URL - https://lost-found-tau.vercel.app/
+## Live URL - lost-found-rose.vercel.app/
 
 ## Backend Routes
 
